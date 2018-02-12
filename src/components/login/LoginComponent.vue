@@ -60,9 +60,10 @@ export default {
             
             if (form.user != "" && form.pass != "") {
                 sessionStorage.setItem('token', '123456');
-                router.push('Home')
+                router.push('/home')
+                router.go('/home')
             } else {
-                router.push('/')
+                router.go('/')
             }
         }
     }
