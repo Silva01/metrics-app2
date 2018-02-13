@@ -1,17 +1,19 @@
 <template>
-    <div>
-        <div>
-            <h1>Teste</h1>
-        </div>
-
+    <div>        
+        <sidebar-menu></sidebar-menu>        
         <router-view></router-view>
     </div>    
 </template>
 
 <script>
 
+import SidebarMenu from './menu/SidebarMenu'
+
 export default {
-    name: 'layout'
+    name: 'layout',
+    components: {
+        SidebarMenu
+    }
 }
 </script>
 
