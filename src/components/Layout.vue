@@ -1,7 +1,11 @@
 <template>
-    <div>        
-        <sidebar-menu></sidebar-menu>        
-        <router-view></router-view>
+    <div class="container">
+        <div>
+            <sidebar-menu></sidebar-menu>    
+        </div>    
+        <div>
+            <router-view></router-view>
+        </div>    
     </div>    
 </template>
 
