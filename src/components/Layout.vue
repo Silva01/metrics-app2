@@ -3,7 +3,7 @@
         <div>
             <sidebar-menu></sidebar-menu>    
         </div>    
-        <div>
+        <div id="container-page">
             <router-view></router-view>
         </div>    
     </div>    

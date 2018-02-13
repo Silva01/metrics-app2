@@ -1,5 +1,5 @@
 <template>
-    <div id="container-page" class="page-container-aling">        
+    <div>        
         <b-card title="Card Title"
                 img-src=""
                 img-alt="Image"
