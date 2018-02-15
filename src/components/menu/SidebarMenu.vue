@@ -1,5 +1,6 @@
 <template>
 	<div>
+
 		<div id="sidebar">
 			<ul>
 				<li><a href="#"> <i class="fab fa-accusoft"></i> &nbsp; Config</a></li>
@@ -15,6 +16,7 @@
 				<span></span>
 			</div>
 		</div>
+		
 	</div>    
 </template>
 
