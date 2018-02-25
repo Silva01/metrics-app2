@@ -5,7 +5,7 @@ $section-width: 80vw;
 $section-max-width: 64rem;
 
 $card-width: 19rem;
-$card-height: 22.5rem;
+$card-height: 10rem;
 
 $to-smaller: "screen and (max-width : 620px)";
 $to-vertical: "screen and (max-width : 480px)";
@@ -94,7 +94,7 @@ $to-vertical: "screen and (max-width : 480px)";
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: .05rem;
-    
+
     box-shadow: 0 2rem 4rem $shadow-col;
 
     @media #{$to-vertical} {
