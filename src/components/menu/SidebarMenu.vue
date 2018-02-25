@@ -28,8 +28,19 @@ export default {
     props:['mostrar'],
     methods:{
         exibir: () => {
-            $('#sidebar').toggleClass('visible');
-            $('#container-page').toggleClass('ativo');
+            this.mostrar = typeof this.mostrar == 'undefined' ? true : this.mostrar;
+
+            if (this.mostrar) {
+              $('#sidebar').toggleClass('visible');
+              $('#container-page').toggleClass('ativo');
+              $('#card-1').css("width", "60rem");
+              this.mostrar = false;
+            } else {
+              $('#sidebar').toggleClass('visible');
+              $('#container-page').toggleClass('ativo');
+              $('#card-1').css("width", "64.5rem");
+              this.mostrar = true;
+            }
         }
     }
 }

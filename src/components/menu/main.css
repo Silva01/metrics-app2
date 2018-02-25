@@ -16,14 +16,14 @@ body{
 }
 
 #sidebar.visible{
-    left:0px;
-	width: 160px;	 
+  left:0px;
+	width: 160px;
 	transition:width 0.3s linear;
 }
 
 ul{
 	margin:4px 0;
-	padding:0px;	
+	padding:0px;
 }
 
 ul li{

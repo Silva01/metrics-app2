@@ -1,5 +1,5 @@
 <template>
-  <div class="card2 card--oil">
+  <div v-bind:id="id" class="card2 card--oil">
     <div class="card__count-container">
       <div class="card__count-text">
         <span class="card__count-text--big">{{ valor }}</span> {{ tipo }}
@@ -14,7 +14,7 @@
 <script>
   export default {
     name: 'grafico',
-    props: ['valor', 'tipo', 'label']
+    props: ['valor', 'tipo', 'label', 'id']
   }
 </script>
 
