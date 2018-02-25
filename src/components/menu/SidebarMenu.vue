@@ -16,8 +16,8 @@
 				<span></span>
 			</div>
 		</div>
-		
-	</div>    
+
+	</div>
 </template>
 
 <script>
@@ -28,8 +28,8 @@ export default {
     props:['mostrar'],
     methods:{
         exibir: () => {
-            $('#sidebar').toggleClass('visible')
-            $('#container-page').toggleClass('ativo')
+            $('#sidebar').toggleClass('visible');
+            $('#container-page').toggleClass('ativo');
         }
     }
 }

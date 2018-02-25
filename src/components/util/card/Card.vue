@@ -1,14 +1,14 @@
-<template>    
-    <div class="card card--oil">       
+<template>
+    <div class="card card--oil">
         <div class="card__count-container">
             <div class="card__count-text">
                 <span class="card__count-text--big">{{ valor }}</span> {{ tipo }}
             </div>
         </div>
-        <div class="card__stuff-container">            
+        <div class="card__stuff-container">
             <div class="card__stuff-text">{{ label }}</div>
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -23,6 +23,6 @@ export default {
 </script>
 
 <style lang="sass">
-    @import './card.scss';
+    @import './card.scss'
 </style>
 
