@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import SidebarMenu from './menu/SidebarMenu'
 

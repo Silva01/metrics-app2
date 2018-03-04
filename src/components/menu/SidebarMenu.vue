@@ -20,14 +20,14 @@
 	</div>
 </template>
 
-<script>
-import $ from 'jquery'
+<script lang="ts">
+import * as $ from 'jquery'
 
 export default {
     name:'sidebar-menu',
     props:['mostrar'],
     methods:{
-        exibir: () => {
+        exibir: function ():void {
             this.mostrar = typeof this.mostrar == 'undefined' ? true : this.mostrar;
 
             if (this.mostrar) {
