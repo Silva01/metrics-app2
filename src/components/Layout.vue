@@ -1,12 +1,12 @@
 <template>
     <div class="container">
         <div>
-            <sidebar-menu></sidebar-menu>    
-        </div>    
+            <sidebar-menu></sidebar-menu>
+        </div>
         <div id="container-page">
             <router-view></router-view>
-        </div>    
-    </div>    
+        </div>
+    </div>
 </template>
 
 <script>
