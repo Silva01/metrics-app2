@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import Card from '../util/card/Card'
 import Grafico from '../util/graficos/Grafico'
