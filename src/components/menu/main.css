@@ -35,21 +35,21 @@ ul li{
 
 ul li a{
 	color:#ccc;
-    position: relative;
+  position: relative;
 	display:table;
-	width:100px;
+	width:60%;
 	padding-top:20px;
 	text-decoration: none;
 }
 
 #sidebar-btn{
-	display:inline-block;
+	/*display:inline-block;*/
 	vertical-align: middle;
 	width:20px;
 	height:15px;
 	cursor:pointer;
 	margin:20px;
-	position:absolute;
+	/*position:absolute;*/
 	top:0px;
 	right:-60px;
 }
@@ -77,4 +77,13 @@ ul li a{
 #container-page.ativo{
 	padding-left: 10%;
 	transition: padding-left 0.3s linear;
+}
+
+.legend {
+  font-size: 16px;
+  color: white;
+}
+
+.sidebar-info {
+  top: 30rem;
 }

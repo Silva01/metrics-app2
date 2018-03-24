@@ -42,7 +42,7 @@
 <script lang="ts">
 
 import Router from 'vue-router'
-import axios  from 'axios'
+import Http from "../../assets/classes/Http";
 
 export default {
     name:'login-component',
@@ -56,7 +56,10 @@ export default {
     },
     methods:{
         get: (form: any) => {
-            axios.post('http://localhost:4567/service', {
+
+            let http = new Http();
+
+            http.post('http://localhost:4567/service', {
               id: 'auth',
               jsonrpc: '2.0',
               auth: 'aaaa',
@@ -65,14 +68,15 @@ export default {
                 usuario: form.user,
                 senha: form.pass
               }
-            })
-            .then(success => {
-                sessionStorage.setItem('token', success.data.result);
-                window.location.href = '#/home';
-            })
-            .catch(e => {
-              window.location.href = '#/login';
-            });
+          })
+          .then(success => success.json())
+          .then(data => {
+            sessionStorage.setItem('token', data.result);
+            window.location.href = '#/home';
+          })
+          .catch(e => {
+            window.location.href = '#/login';
+          });
         }
     }
 }

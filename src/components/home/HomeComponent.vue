@@ -48,7 +48,7 @@ export default {
     .grid-container {
         display: grid;
         grid-template-columns: auto auto auto;
-        margin: 0px 2% 3% 12%;
+        margin: 0px 0% 2% 0%;
     }
     .grid-item {
         font-size: 30px;
