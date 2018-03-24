@@ -40,6 +40,8 @@ ul li a{
 	width:60%;
 	padding-top:20px;
 	text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #sidebar-btn{
@@ -84,6 +86,36 @@ ul li a{
   color: white;
 }
 
-.sidebar-info {
-  top: 30rem;
+#sidebar-info {
+  top: 25rem;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  text-align: justify;
+  height: 96px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#expandir {
+  display: inline-flex;
+  cursor: pointer;
 }
