@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logout-btn">
+    <div class="logout-btn" v-on:click="logout()">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
            width="40" height="40"
            viewBox="0 0 64 64"
@@ -24,7 +24,13 @@
 
 <script lang="ts">
   export default {
-      name: 'nav-bar-metrics'
+      name: 'nav-bar-metrics',
+      methods: {
+          logout: function() {
+              sessionStorage.removeItem('token');
+              window.location.href = '#/login';
+          }
+      }
   }
 </script>
 
