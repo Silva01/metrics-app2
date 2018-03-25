@@ -42,7 +42,7 @@
 <script lang="ts">
 
 import Router from 'vue-router'
-import Http from "../../assets/classes/Http";
+import Http from "../../assets/classes/http";
 
 export default {
     name:'login-component',
@@ -59,7 +59,7 @@ export default {
 
             let http = new Http();
 
-            http.post('http://localhost:4567/service', {
+            http.post('http://metrics/service', {
               id: 'auth',
               jsonrpc: '2.0',
               auth: 'aaaa',
