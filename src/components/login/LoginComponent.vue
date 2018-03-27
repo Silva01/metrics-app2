@@ -11,19 +11,19 @@
 
             <!-- Login Form -->
             <form>
-            <input 
-                type="text" 
-                id="login" 
-                class="fadeIn second" 
-                name="login" 
+            <input
+                type="text"
+                id="login"
+                class="fadeIn second"
+                name="login"
                 placeholder="Usuário"
                 v-model="form.user">
 
-            <input 
-                type="password" 
-                id="password" 
-                class="fadeIn third" 
-                name="login" 
+            <input
+                type="password"
+                id="password"
+                class="fadeIn third"
+                name="login"
                 placeholder="Senha"
                 v-model="form.pass">
 
@@ -39,9 +39,10 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import Router from 'vue-router'
+import Http from "../../assets/classes/http";
 
 export default {
     name:'login-component',
@@ -54,17 +55,28 @@ export default {
         }
     },
     methods:{
-        get: (form) => {
+        get: (form: any) => {
 
-            let router = new Router()
-            
-            if (form.user != "" && form.pass != "") {
-                sessionStorage.setItem('token', '123456');
-                router.push('/home')
-                router.go('/home')
-            } else {
-                router.go('/')
-            }
+            let http = new Http();
+
+            http.post('http://metrics/service', {
+              id: 'auth',
+              jsonrpc: '2.0',
+              auth: 'aaaa',
+              method: 'login',
+              params: {
+                usuario: form.user,
+                senha: form.pass
+              }
+          })
+          .then(success => success.json())
+          .then(data => {
+            sessionStorage.setItem('token', data.result);
+            window.location.href = '#/home';
+          })
+          .catch(e => {
+            window.location.href = '#/login';
+          });
         }
     }
 }

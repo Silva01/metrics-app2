@@ -5,19 +5,26 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
-import LayoutAuth from './components/LayoutAuth'
-import Layout from './components/Layout'
+import LayoutAuth from './components/LayoutAuth.vue'
+import Layout from './components/Layout.vue'
+import * as $ from 'jquery'
 
 export default {
   name: 'App',
   components: {
     LayoutAuth,
-    Layout    
+    Layout
   },
   computed: {
     isAuth() {
+      if (this.$route.path.match('/login')) {
+        $('body').css('background-color', '#3cc9c9');
+      } else {
+        $('body').css('background-color', 'white');
+      }
+
       return this.$route.path.match('/login')
     }
   }
@@ -31,6 +38,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
