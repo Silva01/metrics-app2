@@ -5,13 +5,14 @@ body{
 }
 
 #sidebar{
-	background:#151718;
+	background-image: linear-gradient(to top, #2069b4, #191933);
 	width:40px;
 	height:100%;
 	display:block;
 	position:fixed;
 	left:0px;
-	top:0px;
+	top:46px;
+  box-shadow: 2px 2px 10px #0d0d0d;
 	transition: width 0.3s linear;
 }
 
@@ -88,11 +89,6 @@ ul li a{
 
 #sidebar-info {
   top: 25rem;
-}
-
-.active {
-  background-color: green;
-  color: white;
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
