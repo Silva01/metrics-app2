@@ -1,19 +1,21 @@
 <template>
   <div>
-    <div class="grid-container">
-      <div class="grid-item">
+    <el-row :gutter="20">
+      <el-col :span="8">
         <card :valor="quantQuestoes" :label="label1" :tipo="tipoPorcent"></card>
-      </div>
-      <div class="grid-item">
+      </el-col>
+      <el-col :span="8">
         <card :valor="porcentAcertos" :label="label2" :tipo="tipoPorcent"></card>
-      </div>
-      <div class="grid-item">
+      </el-col>
+      <el-col :span="8">
         <card :valor="pontosMes" :label="label3" :tipo="tipoPontos"></card>
-      </div>
-    </div>
-    <div class="grid-container">
-      <grafico :id="idCard" :valor="pontosMes" :label="label3" :tipo="tipoPontos"></grafico>
-    </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="24">
+        <card :valor="pontosMes" :label="label3" :tipo="tipoPontos"></card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -45,13 +47,5 @@ export default {
 </script>
 
 <style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin: 0px 0% 2% 0%;
-    }
-    .grid-item {
-        font-size: 30px;
-        text-align: center;
-    }
+
 </style>
