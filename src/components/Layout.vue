@@ -1,16 +1,17 @@
 <template>
-    <div>
-      <nav-bar-metric></nav-bar-metric>
-
-      <div class="grid-container">
-        <div class="item2">
+    <el-container>
+      <el-header id="header-nav">
+        <nav-bar-metric></nav-bar-metric>
+      </el-header>
+      <el-container>
+        <el-aside id="aside-layout" width="6%">
           <sidebar-menu></sidebar-menu>
-        </div>
-        <div class="item3">
+        </el-aside>
+        <el-main>
           <router-view></router-view>
-        </div>
-      </div>
-    </div>
+        </el-main>
+      </el-container>
+    </el-container>
 </template>
 
 <script lang="ts">
@@ -28,18 +29,8 @@ export default {
 </script>
 
 <style>
-  .item1 { grid-area: header; }
-  .item2 {
-    grid-area: menu;
-    width: 5%;
-  }
-  .item3 {
-    grid-area: main;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-gap: 10px;
-  }
+#header-nav {
+  padding: 0;
+}
 
 </style>

@@ -43,6 +43,7 @@
 
 import Router from 'vue-router'
 import Http from "../../assets/classes/http";
+import Notificacao from '../../assets/classes/Notificacao'
 
 export default {
     name:'login-component',
@@ -75,7 +76,7 @@ export default {
             window.location.href = '#/home';
           })
           .catch(e => {
-            window.location.href = '#/login';
+            Notificacao.error('Usuário ou Senha Inválida(s)', 'Error');
           });
         }
     }
