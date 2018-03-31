@@ -11,7 +11,7 @@
         <card :valor="pontosMes" :label="label3" :tipo="tipoPontos"></card>
       </el-col>
     </el-row>
-    <el-row>
+    <el-row class="graphic-row">
       <el-col :span="24">
         <card :valor="pontosMes" :label="label3" :tipo="tipoPontos"></card>
       </el-col>
@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style>
-
+  .graphic-row {
+    margin-top: 1.5%;
+  }
 </style>
