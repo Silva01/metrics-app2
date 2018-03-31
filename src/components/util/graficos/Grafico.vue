@@ -1,23 +1,35 @@
 <template>
-  <div v-bind:id="id" class="card2 card--oil">
-    <div class="card__count-container">
-      <div class="card__count-text">
-        <span class="card__count-text--big">{{ valor }}</span> {{ tipo }}
-      </div>
+  <el-card class="box-card">
+    <div slot="header" class="clearfix">
+      <span>{{ title }}</span>
+      <el-button type="danger" style="float: right" icon="el-icon-setting" circle></el-button>
     </div>
-    <div class="card__stuff-container">
-      <div class="card__stuff-text">{{ label }}</div>
+    <div>
+      <canvas v-bind:id="id" v-bind:width="width" v-bind:height="height"></canvas>
     </div>
-  </div>
+  </el-card>
 </template>
 
 <script lang="ts">
+  import CardGraphic from "./card-graphic";
+  import * as Chart from 'chart.js';
+
   export default {
     name: 'grafico',
-    props: ['valor', 'tipo', 'label', 'id']
+    props: [
+      'type',
+      'indicadores',
+      'title',
+      'id',
+      'width',
+      'height'
+    ],
+    mounted: function () {
+        let serie = new CardGraphic();
+        let graphic = document.getElementById(this.id);
+        new Chart(graphic, serie.getSeries());
+    }
   }
 </script>
 
-<style lang="sass">
-  @import "grafico"
-</style>
+<style></style>

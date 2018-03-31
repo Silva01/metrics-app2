@@ -55,11 +55,11 @@ export default {
 <style>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
-    height: 35rem;
+    height: 100%;
   }
 
   .el-menu--collapse {
-    height: 35rem;
+    height: 100%;
   }
 
   #aside-layout {

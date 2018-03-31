@@ -13,7 +13,12 @@
     </el-row>
     <el-row class="graphic-row">
       <el-col :span="24">
-        <card :valor="pontosMes" :label="label3" :tipo="tipoPontos"></card>
+        <grafico
+          :id="'789'"
+          :width="'200px'"
+          :height="'66px'"
+          :title="'Grafico Mensal'">
+        </grafico>
       </el-col>
     </el-row>
   </div>
