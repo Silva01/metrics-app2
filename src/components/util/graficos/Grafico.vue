@@ -2,7 +2,7 @@
   <el-card class="box-card">
     <div slot="header" class="clearfix">
       <span>{{ title }}</span>
-      <el-button type="danger" style="float: right" icon="el-icon-setting" circle></el-button>
+      <el-button type="danger" style="float: right" icon="el-icon-setting" v-on:click="filtro()" circle></el-button>
     </div>
     <div>
       <canvas v-bind:id="id" v-bind:width="width" v-bind:height="height"></canvas>
@@ -28,6 +28,11 @@
         let serie = new CardGraphic();
         let graphic = document.getElementById(this.id);
         new Chart(graphic, serie.getSeries());
+    },
+    methods: {
+        filtro: function() {
+            alert('teste');
+        }
     }
   }
 </script>

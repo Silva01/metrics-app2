@@ -12,6 +12,6 @@ export default class Metricas {
   }
 
   countingSuccessQuestions(params: Object): Promise<any> {
-    return this.http.post('http://metrics.graphic.success', JSON.stringify(params));
+    return this.http.post('http://metrics.graphic.success', params);
   }
 }

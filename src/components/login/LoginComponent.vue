@@ -60,7 +60,7 @@ export default {
 
             let http = new Http();
 
-            http.post('http://metrics/service', {
+            http.post('http://metrics.auth.login', {
               id: 'auth',
               jsonrpc: '2.0',
               auth: 'aaaa',
