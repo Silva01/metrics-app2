@@ -14,4 +14,8 @@ export default class Metricas {
   countingSuccessQuestions(params: Object): Promise<any> {
     return this.http.post('http://metrics.graphic.success', params);
   }
+
+  porcentSuccessQuestions(params: Object): Promise<any> {
+    return this.http.post('http://metrics.performance.quest', params);
+  }
 }

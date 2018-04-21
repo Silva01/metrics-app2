@@ -75,7 +75,21 @@ export default {
       )
         .then(s => s.json())
         .then(data => this.quantQuestoes = data.result)
-        .catch(e => Notification.error(e.message, 'Error'))
+        .catch(e => Notification.error(e.message, 'Error'));
+
+      metricas.porcentSuccessQuestions(
+        {
+          auth: sessionStorage.getItem('token'),
+          params: {
+            banca: 'all',
+            date_begin: Utils.convertDateToString(defaultDateBegin),
+            date_end: Utils.convertDateToString(defaultDateEnd)
+          }
+        }
+      )
+        .then(s => s.json())
+        .then(data => this.porcentAcertos = data.result)
+        .catch(e => Notification.error(e.message, 'Error'));
     }
 }
 </script>
